@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tortora Reviewer · Ch 12–21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#0f1923;--pn:#1a2733;--pn2:#22313f;--tx:#ece8e1;--mu:#8b97a3;--rd:#ff4655;--tl:#3fd6b0;--bd:#2f4152;--cut:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));--hd:'Oswald','Bebas Neue','Arial Narrow',Impact,sans-serif;--bdy:'Barlow','Segoe UI',system-ui,sans-serif}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg) linear-gradient(135deg,transparent 60%,rgba(255,70,85,.07));color:var(--tx);font:16px/1.6 var(--bdy);min-height:100vh}
+header,main,.bar{max-width:880px;margin:0 auto;padding-left:22px;padding-right:22px}
+header{padding-top:30px;padding-bottom:14px;border-bottom:2px solid var(--rd);position:relative}
+header:after{content:"";position:absolute;left:22px;bottom:-2px;width:70px;height:6px;background:var(--tx)}
+h1{margin:0;font:700 2rem var(--hd);text-transform:uppercase;letter-spacing:.04em}
+header p{margin:4px 0 0;color:var(--mu);font:500 13px var(--bdy);text-transform:uppercase;letter-spacing:.14em}
+.bar,.tools{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding-top:14px;font:600 13px var(--hd);text-transform:uppercase;letter-spacing:.08em}
+button,select,textarea{font:inherit;color:var(--tx)}
+button,select{border:1px solid var(--bd);background:var(--pn);padding:8px 16px;cursor:pointer;clip-path:var(--cut);transition:background .15s}
+select{border-radius:0}button:hover{background:var(--pn2)}button.on{background:var(--rd);color:#fff;border-color:var(--rd)}
+main{padding-bottom:60px}
+h2{font:700 1.35rem var(--hd);text-transform:uppercase;letter-spacing:.06em;margin:28px 0 6px;padding-left:12px;border-left:5px solid var(--rd)}
+.item,.fc,.two>div{background:var(--pn);border:1px solid var(--bd);border-left:4px solid var(--rd);clip-path:var(--cut);padding:13px 18px;margin:10px 0}
+.item b,.two b{display:block;font:600 12px var(--hd);text-transform:uppercase;letter-spacing:.14em;color:var(--rd);margin-bottom:4px}
+strong{font-weight:700;color:#fff}
+mark{background:rgba(255,70,85,.28);color:#fff;padding:0 3px;border-bottom:2px solid var(--rd)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}.two>div{margin:0}
+.two .dv{background:var(--pn2);border-left-color:var(--tl)}.two .dv b{color:var(--tl)}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+textarea{width:100%;box-sizing:border-box;margin:8px 0;background:var(--bg);border:1px solid var(--bd);padding:9px;min-height:54px;font:15px var(--bdy)}
+textarea:focus{outline:1px solid var(--rd)}
+.item p{margin:8px 0 0;padding:9px 12px;background:var(--bg);border-left:4px solid var(--tl)}
+.fc{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.2rem;cursor:pointer;padding:30px}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 16px;font:500 15px var(--bdy);text-transform:none;letter-spacing:0}
+.opt.ok,.tile.ok{background:rgba(63,214,176,.2);border-color:var(--tl)}.opt.no{background:rgba(255,70,85,.25);border-color:var(--rd)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:10px}
+.tile{min-height:72px;font:500 13px var(--bdy);text-transform:none;letter-spacing:0}.tile.on{background:var(--rd);color:#fff}
+</style></head><body>
+<header><h1>Anatomy &amp; Physiology Reviewer</h1><p>Tortora 15th ed. · Chapters 12–21 · active-recall study guide</p></header>
+<div class="bar"><span id="modes" style="display:contents"></span><select id="sel"></select></div>
+<main id="out"></main>
+<script>
+const D=[
+["12 Nervous Tissue",[
+["Divisions","CNS = brain + spinal cord. PNS = nerves/ganglia; somatic (voluntary skeletal muscle), autonomic (smooth/cardiac muscle, glands), enteric. Functions: sensory, integrative, motor."],
+["Neuroglia","CNS: astrocytes (blood–brain barrier, K⁺ buffer), oligodendrocytes (myelin), microglia (phagocytes), ependymal (CSF). PNS: Schwann cells (myelin, one axon each), satellite cells."],
+["Resting membrane potential","About −70 mV, from unequal ion distribution, leak channels (more K⁺ leaks out than Na⁺ in), and the Na⁺/K⁺ ATPase pump (3 Na⁺ out, 2 K⁺ in)."],
+["Graded vs action potential","Graded: variable amplitude, decremental, short range; ligand-/mechanically-gated channels. Action potential: all-or-none, regenerative; threshold ≈ −55 mV; depolarize (Na⁺ in) → repolarize (K⁺ out) → afterhyperpolarization."],
+["Conduction speed","Faster with larger diameter and myelination. Continuous conduction = unmyelinated; saltatory conduction = jumps between nodes of Ranvier (myelinated)."],
+["Synapses","Electrical (gap junctions) vs chemical (neurotransmitter, Ca²⁺-triggered exocytosis). EPSP depolarizes; IPSP hyperpolarizes. Summation: spatial (different sites) and temporal (same site, different times)."],
+["Neurotransmitters","ACh, amino acids (glutamate = main excitatory; GABA, glycine = inhibitory), biogenic amines (NE, epi, dopamine, serotonin), neuropeptides, NO. Ionotropic = fast; metabotropic = slower, G-protein."],
+["Circuits &amp; repair","Diverging, converging, reverberating, parallel after-discharge. Regeneration occurs in PNS (neurolemma guides regrowth); CNS is limited."]]],
+["13 Spinal Cord &amp; Spinal Nerves",[
+["Protection","Vertebral column, meninges (dura, arachnoid, pia mater), CSF. Epidural space lies outside the dura. Cord ends at L1–L2 (conus medullaris); cauda equina below."],
+["Cord anatomy","Cervical and lumbar enlargements. Gray matter: horns (posterior = sensory, anterior = somatic motor, lateral = autonomic T1–L2). White matter: columns of tracts."],
+["Spinal nerves","31 pairs (8 C, 12 T, 5 L, 5 S, 1 Co); all are mixed. Dorsal root = sensory (ganglion); ventral root = motor. Branches: rami, meningeal."],
+["Plexuses","Cervical (C1–C5; phrenic nerve C3–C5 → diaphragm), brachial (C5–T1; axillary, musculocutaneous, radial, median, ulnar), lumbar (L1–L4; femoral, obturator), sacral (L4–S4; sciatic). Thoracic nerves T2–T12 are intercostal, no plexus."],
+["Dermatomes","Skin area supplied by one spinal nerve; all spinal nerves except C1 have one."],
+["Cord physiology","Sensory (ascending) tracts and motor (descending) tracts; reflex arc = receptor → sensory neuron → integrating center → motor neuron → effector. Types: stretch, tendon, flexor, crossed extensor (ipsilateral vs contralateral)."]]],
+["14 Brain &amp; Cranial Nerves",[
+["Organization","Major parts: brainstem (medulla, pons, midbrain), cerebellum, diencephalon (thalamus, hypothalamus), cerebrum. Protected by cranial meninges and CSF."],
+["CSF","Made by choroid plexuses; flows lateral ventricles → 3rd → 4th → subarachnoid space; reabsorbed through arachnoid villi into the superior sagittal sinus. Blood–brain barrier protects."],
+["Brainstem","Medulla: heart rate, breathing, vasomotor centers, pyramids decussate. Pons: relays, pontine respiratory centers. Midbrain: colliculi (visual/auditory reflexes), substantia nigra (dopamine). Reticular formation = arousal."],
+["Cerebellum &amp; diencephalon","Cerebellum: coordination, balance, posture. Thalamus: relay station. Hypothalamus: homeostasis, autonomic control, endocrine control, body temperature, hunger/thirst, circadian rhythm."],
+["Cerebrum","Gyri, sulci, fissures; lobes: frontal, parietal, temporal, occipital, insula. White matter: association, commissural (corpus callosum), projection tracts. Basal nuclei (movement), limbic system (emotion, memory; hippocampus)."],
+["Cortical areas","Sensory: primary somatosensory (parietal), visual (occipital), auditory (temporal), gustatory, olfactory. Motor: primary motor (precentral gyrus). Broca's area = speech production; Wernicke's/common integrative = comprehension. EEG: alpha, beta, theta, delta waves."],
+["Cranial nerves (12)","I Olfactory (S), II Optic (S), III Oculomotor, IV Trochlear, V Trigeminal (largest, mixed), VI Abducens, VII Facial, VIII Vestibulocochlear (S), IX Glossopharyngeal, X Vagus, XI Accessory, XII Hypoglossal. Mnemonic: Oh Oh Oh To Touch And Feel Very Green Vegetables AH!"],
+["Development &amp; aging","Neural tube → three primary vesicles (prosencephalon, mesencephalon, rhombencephalon) → five secondary vesicles. Aging: reduced brain mass and slower processing."]]],
+["15 Autonomic Nervous System",[
+["Somatic vs ANS","Somatic: one motor neuron, always excitatory, ACh to skeletal muscle. ANS: two-neuron chain (preganglionic → ganglion → postganglionic), excitatory or inhibitory, to smooth muscle, cardiac muscle, glands."],
+["Sympathetic","Thoracolumbar outflow (T1–L2); short preganglionic, long postganglionic; sympathetic trunk ganglia, prevertebral ganglia (celiac, superior/inferior mesenteric); adrenal medulla. 'Fight or flight' with wide, diffuse effects."],
+["Parasympathetic","Craniosacral outflow (CN III, VII, IX, X and S2–S4); long preganglionic, short postganglionic; terminal ganglia. 'Rest and digest', localized effects."],
+["Neurotransmitters","Cholinergic: ACh (all preganglionic; parasympathetic postganglionic) with nicotinic and muscarinic receptors. Adrenergic: NE (most sympathetic postganglionic) with α and β receptors."],
+["Physiology &amp; control","Dual innervation with opposing effects, autonomic tone. Hypothalamus is the main control center; autonomic reflexes (e.g., baroreceptor), with input from limbic system and cortex."]]],
+["16 Sensory, Motor &amp; Integrative",[
+["Sensation","Receptor types: mechanoreceptors, thermoreceptors, nociceptors, photoreceptors, chemoreceptors. Adaptation: rapid (touch) vs slow (pain, proprioceptors)."],
+["Somatic senses","Tactile (Meissner, Merkel, Pacinian, Ruffini), thermal, pain (fast A-delta, slow C fibers). Referred pain: visceral pain felt on the body surface. Proprioception: muscle spindles, tendon organs, joint receptors."],
+["Sensory pathways","3-neuron chain to cortex. Posterior column–medial lemniscus: fine touch, vibration, proprioception (crosses in medulla). Anterolateral (spinothalamic): pain, temperature (crosses in cord). Spinocerebellar: unconscious proprioception."],
+["Motor pathways","Direct (pyramidal): corticospinal (lateral and anterior) and corticobulbar. Indirect (extrapyramidal): rubrospinal, tectospinal, vestibulospinal, reticulospinal. Upper vs lower motor neurons. Basal nuclei and cerebellum modulate movement."],
+["Integrative functions","Wakefulness and sleep (RAS; NREM and REM), learning and memory (short/long term), language, emotion."]]],
+["17 The Special Senses",[
+["Olfaction","Olfactory epithelium in the superior nasal cavity; bipolar receptor cells → olfactory bulb → CN I → olfactory cortex. Fast adaptation. Directly linked to the limbic system."],
+["Gustation","Taste buds in papillae (circumvallate, fungiform, foliate). Five tastes: sweet, sour, salty, bitter, umami. CN VII, IX, X carry taste."],
+["Eye anatomy","Tunics: fibrous (sclera, cornea), vascular (choroid, ciliary body, iris), nervous (retina). Lens; aqueous humor (anterior cavity), vitreous body (posterior cavity). Accessory: eyelids, lacrimal apparatus, extrinsic muscles."],
+["Vision physiology","Refraction, accommodation (lens thickens, pupil constricts, convergence). Rods: dim light, low acuity. Cones: color, acuity (fovea). Rhodopsin/photopigment cycle. Pathway: retina → optic nerve → chiasm → LGN → occipital cortex."],
+["Ear &amp; hearing","Outer (auricle, canal, tympanic membrane), middle (ossicles: malleus, incus, stapes; auditory tube), inner (cochlea, vestibule, semicircular canals). Sound → ossicles → oval window → perilymph waves → hair cells of organ of Corti."],
+["Equilibrium","Static: utricle and saccule (maculae, otoliths). Dynamic: semicircular canals (cristae in ampullae). Via CN VIII to brainstem and cerebellum."]]],
+["18 The Endocrine System",[
+["Endocrine vs nervous","Endocrine: hormones via blood, slower and longer lasting. Nervous: nerve impulses, fast and brief. Hormones act on target cells with specific receptors."],
+["Hormone action","Lipid-soluble (steroids, thyroid hormones): intracellular receptors → gene activation. Water-soluble: membrane receptors → G-proteins → second messenger (cAMP). Control by negative (most) or positive feedback."],
+["Hypothalamus &amp; pituitary","Anterior: GH, TSH, ACTH, FSH, LH, PRL (regulated by releasing/inhibiting hormones via portal system). Posterior: oxytocin and ADH (made in the hypothalamus, stored in the posterior pituitary)."],
+["Thyroid &amp; parathyroid","Thyroid: T3/T4 (metabolic rate; need iodine), calcitonin (lowers blood Ca²⁺). Parathyroid: PTH raises blood Ca²⁺ (bone, kidney, calcitriol activation)."],
+["Adrenal glands","Cortex: mineralocorticoids (aldosterone; Na⁺/K⁺), glucocorticoids (cortisol; stress, anti-inflammatory), androgens. Medulla: epinephrine and NE."],
+["Pancreas &amp; others","Alpha cells: glucagon (raises glucose). Beta cells: insulin (lowers glucose). Delta: somatostatin. Pineal: melatonin. Thymus: thymosin. Gonads: sex hormones. Others: eicosanoids, kidneys, heart, GI hormones."],
+["Stress response","Alarm (sympathetic and adrenal medulla), resistance (cortisol, GH), exhaustion."]]],
+["19 CV System: The Blood",[
+["Blood basics","Plasma (≈55%, mostly water) and formed elements (≈45%). Functions: transport, regulation (pH, temperature, osmosis), protection. Hematocrit: ≈ 42–45%."],
+["Hemopoiesis","Red bone marrow stem cells → myeloid (RBCs, platelets, granulocytes, monocytes) and lymphoid (lymphocytes). Hormones: EPO (RBCs), TPO (platelets), CSFs and interleukins (WBCs)."],
+["Red blood cells","Biconcave, no nucleus, hemoglobin (4 globin + 4 heme, carries O₂ on Fe²⁺). Lifespan ≈120 days; broken down in spleen/liver, recycling of iron and bilirubin."],
+["White blood cells","Granular: neutrophils (phagocytes), eosinophils (parasites, allergy), basophils (histamine, heparin). Agranular: lymphocytes (B, T, NK), monocytes (→ macrophages). Mnemonic: Never Let Monkeys Eat Bananas."],
+["Platelets &amp; hemostasis","Vascular spasm → platelet plug → coagulation (intrinsic + extrinsic → common pathway: prothrombinase → thrombin → fibrin). Fibrinolysis by plasmin. Anticoagulants: heparin, warfarin."],
+["Blood groups","ABO (antigens A, B; O = universal donor, AB = universal recipient) and Rh. Hemolytic disease of the newborn: Rh⁻ mother with Rh⁺ fetus."]]],
+["20 CV System: The Heart",[
+["Heart anatomy","In mediastinum; pericardium (fibrous, serous: parietal and visceral/epicardium). Wall: epicardium, myocardium, endocardium. Four chambers: right and left atria and ventricles."],
+["Valves &amp; circulation","AV valves: tricuspid (right), bicuspid/mitral (left); semilunar: pulmonary and aortic. Pulmonary circuit: RV → lungs → LA. Systemic: LV → body → RA. Coronary circulation supplies the heart (blocked → MI)."],
+["Conduction system","SA node (pacemaker, ≈100 bpm intrinsic) → AV node → AV bundle (of His) → bundle branches → Purkinje fibers. Intercalated discs with gap junctions and desmosomes. Long refractory period prevents tetanus."],
+["ECG &amp; cardiac cycle","P wave = atrial depolarization; QRS = ventricular depolarization; T wave = ventricular repolarization. Cycle: relaxation, ventricular filling, ventricular systole (isovolumetric contraction → ejection), isovolumetric relaxation. Heart sounds: S1 (AV close), S2 (SL close)."],
+["Cardiac output","CO = SV × HR (≈5.25 L/min). SV regulated by preload (Frank–Starling law), contractility, and afterload. HR regulated by ANS (sympathetic ↑, parasympathetic/vagus ↓), hormones, ions, age, temperature."],
+["Clinical","Exercise ↑ cardiac reserve. Failing hearts: transplants, VADs, pacemakers. Development: heart tubes form in the 3rd week."]]],
+["21 Blood Vessels &amp; Hemodynamics",[
+["Vessel structure","Arteries (elastic and muscular; thick tunica media), arterioles (resistance), capillaries (continuous, fenestrated, sinusoids; exchange), venules and veins (valves, capacitance vessels; ≈64% of blood volume)."],
+["Capillary exchange","Diffusion (main), vesicular transport, bulk flow. Net filtration pressure = (BHP + IFOP) − (BCOP + IFHP). Filtration at arterial end; reabsorption at venous end; excess fluid returns via lymph. Edema = imbalance."],
+["Blood pressure","BP = CO × resistance. Resistance depends on vessel radius (most important), length, and blood viscosity. Mean arterial pressure ≈ diastolic + ⅓ pulse pressure."],
+["Regulation of BP","Neural: cardiovascular center in the medulla; baroreceptors (carotid sinus, aortic arch), chemoreceptors. Hormonal: renin–angiotensin–aldosterone, ADH, epinephrine/NE, ANP (↓ BP). Autoregulation by local vasodilators."],
+["Checking circulation &amp; shock","Pulse, BP via sphygmomanometer (Korotkoff sounds). Shock: hypovolemic, cardiogenic, vascular, obstructive; stages and compensation."],
+["Pathways &amp; development","Aorta: ascending, arch (brachiocephalic, L common carotid, L subclavian), thoracic, abdominal (celiac, SMA, renal, IMA, common iliacs). Veins: superior and inferior vena cava; hepatic portal circulation; fetal circulation (ductus venosus, foramen ovale, ductus arteriosus). Aging: ↑ BP and atherosclerosis."]]]
+];
+const E=[
+{d:[["Myelin makes the impulse stronger.","Myelin insulates; the impulse jumps node to node (saltatory conduction), so it is faster, not stronger."],["Rest means nothing is happening in the neuron.","Rest is active: leak channels plus the Na⁺/K⁺ pump (3 Na⁺ out, 2 K⁺ in) hold about −70 mV."]],
+c:[["Why does Na⁺ rush in at threshold?","Voltage-gated Na⁺ channels open (positive feedback) causing depolarization."],["How does repolarization occur?","Na⁺ channels inactivate and voltage-gated K⁺ channels open, so K⁺ exits."],["Why can't an action potential be stronger?","It is all-or-none; intensity is coded by frequency and number of neurons."]],
+x:[["EPSP vs IPSP","EPSP depolarizes toward threshold; IPSP hyperpolarizes away from it."],["Spatial vs temporal summation","Spatial: many sites at once; temporal: one site, rapid repeats."]]},
+{d:[["The spinal cord fills the whole vertebral canal.","The cord ends at L1–L2 (conus medullaris); below is the cauda equina, so a lumbar puncture at L3–L4 is safe."],["Some spinal nerves are purely sensory or motor.","All 31 pairs are mixed: posterior root (sensory) plus anterior root (motor)."]],
+c:[["Why is a C3–C5 injury life-threatening?","The phrenic nerve to the diaphragm arises there, so breathing stops."],["How does a reflex differ from voluntary movement?","Spinal integration without waiting for the brain: fast and automatic."],["Why does the crossed extensor reflex exist?","The opposite limb extends to support the body while the injured limb withdraws."]],
+x:[["Dorsal root vs ventral root","Dorsal: sensory (with ganglion); ventral: motor."],["Anterior ramus vs posterior ramus","Anterior: limbs and anterolateral trunk (forms plexuses); posterior: deep back."]]},
+{d:[["CSF is made in the arachnoid villi.","Choroid plexuses make CSF; arachnoid villi reabsorb it into venous blood."],["The left hemisphere controls the left side of the body.","Pyramidal decussation means each hemisphere controls the opposite side."]],
+c:[["Why can blocked CSF flow cause hydrocephalus?","Production continues without drainage, so ventricular pressure builds."],["How does the hypothalamus link nervous and endocrine systems?","It controls the anterior pituitary via releasing hormones and the posterior pituitary via its axons."],["Why is the vagus nerve so important?","It gives parasympathetic supply to most thoracic and abdominal organs."]],
+x:[["Broca's vs Wernicke's area","Broca: speech production; Wernicke: comprehension."],["Thalamus vs hypothalamus","Thalamus relays sensory input to the cortex; hypothalamus regulates homeostasis."]]},
+{d:[["Sympathetic and parasympathetic always oppose each other.","Most organs have dual innervation with opposing effects, but sweat glands and most blood vessels get sympathetic only."],["Parasympathetic is the thoracolumbar division.","Sympathetic is thoracolumbar (T1–L2); parasympathetic is craniosacral."]],
+c:[["Why are sympathetic effects widespread?","Preganglionic axons diverge onto many postganglionic neurons, plus adrenal medulla hormones."],["Which neurotransmitter does each ANS neuron release?","ACh from all preganglionic neurons and parasympathetic postganglionic; NE from most sympathetic postganglionic."],["Why is the adrenal medulla special?","Its cells are modified postganglionic neurons secreting epinephrine and NE into blood."]],
+x:[["Nicotinic vs muscarinic receptors","Nicotinic: ionotropic (ganglia, skeletal muscle); muscarinic: metabotropic (parasympathetic effectors)."],["Alpha vs beta receptors","α1: vasoconstriction; β1: increased heart rate and force; β2: bronchodilation."]]},
+{d:[["Pain receptors adapt quickly.","Nociceptors adapt very slowly, which is protective."],["The pyramidal tract controls all voluntary movement.","Indirect pathways, basal nuclei, and the cerebellum also shape movement."]],
+c:[["Why does referred pain occur?","Visceral and somatic afferents converge on the same spinal neurons, so the brain misattributes the pain."],["Where does the posterior column pathway cross?","In the medulla; then it ascends via the medial lemniscus to the thalamus."],["Right spinothalamic tract damage causes pain loss where?","Left side below the lesion, because the tract crosses in the cord."]],
+x:[["Posterior columns vs spinothalamic tract","Posterior: fine touch, vibration, proprioception; spinothalamic: pain, temperature, crude touch."],["Upper vs lower motor neuron","UMN: cortex to brainstem/cord; LMN: to skeletal muscle (damage gives flaccid paralysis)."]]},
+{d:[["Rods give color vision.","Cones give color and acuity; rods work in dim light in black and white."],["The lens does most of the eye's focusing.","The cornea does most refraction; the lens fine-tunes for accommodation."]],
+c:[["Why do smells trigger memories?","Olfactory pathways project directly to the limbic system."],["How does sound reach the hair cells?","Tympanic membrane, ossicles, oval window, perilymph waves, basilar membrane."],["What happens in accommodation for near vision?","Lens thickens, pupil constricts, eyes converge."]],
+x:[["Utricle/saccule vs semicircular canals","Static equilibrium and linear acceleration vs rotation (dynamic)."],["Aqueous vs vitreous humor","Aqueous: anterior, constantly replaced; vitreous: posterior, permanent gel."]]},
+{d:[["Hormones act on every cell.","Only target cells with the specific receptor respond."],["ADH and oxytocin are made in the posterior pituitary.","They are made in the hypothalamus and only stored and released from the posterior pituitary."]],
+c:[["Why do steroid hormones act slowly but last long?","Intracellular receptors change gene transcription."],["How does feedback control blood glucose?","High glucose: insulin lowers it; low glucose: glucagon raises it (negative feedback)."],["How does PTH raise blood Ca²⁺?","More osteoclast activity, more renal reabsorption, and calcitriol activation."]],
+x:[["Insulin vs glucagon","Insulin (beta cells) lowers glucose; glucagon (alpha cells) raises it."],["Aldosterone vs cortisol","Aldosterone: Na⁺ and water retention; cortisol: stress, glucose, anti-inflammatory."]]},
+{d:[["Mature RBCs have a nucleus and can repair themselves.","They lack nuclei and organelles and live about 120 days."],["Serum and plasma are the same.","Serum is plasma minus clotting proteins."]],
+c:[["Why does low O₂ raise the RBC count?","Kidneys release EPO, so red marrow makes more RBCs."],["Why is clotting a positive feedback loop?","Thrombin activates more clotting factors and platelets."],["Why does Rh incompatibility mostly affect a second pregnancy?","The first exposure sensitizes the mother; anti-Rh antibodies then attack the next Rh⁺ fetus."]],
+x:[["Neutrophil vs monocyte","Neutrophil: first-responder phagocyte; monocyte: becomes a macrophage."],["Type O vs type AB","O: no A/B antigens (universal donor); AB: both antigens (universal recipient)."]]},
+{d:[["The left ventricle is thicker because it pumps more blood.","Both pump equal volumes; the left works against higher systemic resistance."],["If the SA node fails, the heart stops.","The AV node and Purkinje fibers take over at slower rates."]],
+c:[["Why can't cardiac muscle undergo tetanus?","Its long refractory period (plateau phase)."],["How does the Frank–Starling law work?","More preload stretch gives stronger contraction and larger stroke volume."],["Why is atrial repolarization not seen on an ECG?","It is hidden by the larger QRS complex."]],
+x:[["Systole vs diastole","Systole: contraction and ejection; diastole: relaxation and filling."],["Tricuspid vs bicuspid valve","Tricuspid: right AV valve; bicuspid (mitral): left AV valve."]]},
+{d:[["Arteries always carry oxygenated blood.","Arteries carry blood away from the heart; pulmonary arteries carry deoxygenated blood."],["Veins carry blood under the highest pressure.","Veins are low pressure; valves and the muscle pump return blood."]],
+c:[["Why is arteriole radius the key to blood pressure?","Resistance is proportional to 1/r⁴, so small changes matter hugely."],["How do baroreceptors respond to falling BP?","Fewer impulses: the cardiovascular center raises sympathetic output (heart rate and vasoconstriction)."],["Why does edema occur?","Filtration exceeds reabsorption or lymph return (high BHP, low BCOP, or lymph blockage)."]],
+x:[["Hydrostatic vs colloid osmotic pressure","BHP pushes fluid out of capillaries; BCOP pulls it in."],["Hepatic portal vs systemic circulation","Portal carries nutrient-rich GI blood to the liver before returning to the heart."]]}];
+const $=s=>document.querySelector(s),sh=a=>[...a].sort(()=>Math.random()-.5);
+let mode='notes',ch=-1,sub='flash',deck='mix',S=[],k=0,fl=false,sc=0,tot=0,sel=null,T=[],m=[],pk=null,tm=0;
+const idx=()=>ch<0?D.map((_,i)=>i):[ch];
+const pool=()=>idx().flatMap(i=>[...(deck=='x'?[]:E[i].c),...(deck=='c'?[]:E[i].x.map(c=>[...c,1]))]);
+const AL=E.flatMap(e=>[...e.c,...e.x]).map(c=>c[1]);
+const M=[['notes','Notes'],['devil','Devil’s Advocate'],['ask','Interrogate'],['role','Roleplay'],['study','Study']];
+$('#sel').innerHTML='<option value="-1">All chapters</option>'+D.map((c,i)=>`<option value="${i}">${c[0]}</option>`).join('');
+$('#sel').onchange=e=>{ch=+e.target.value;S=[];draw()};
+const KW=/\b(all-or-none|saltatory|threshold|decussat\w*|negative feedback|positive feedback|phrenic|cauda equina|choroid plexus\w*|dual innervation|craniosacral|thoracolumbar|referred pain|accommodation|target cells?|EPO|thrombin|Frank–Starling|refractory period|baroreceptors?|resistance|edema|cones|rods)\b/gi;
+const hl=s=>s.replace(/(^|[.;] )([A-Z][A-Za-z0-9⁺⁻₂\/' –()-]{1,30}):/g,'$1<strong>$2:</strong>').replace(KW,'<mark>$&</mark>');
+const rv=`<button onclick="this.nextElementSibling.hidden=false">Reveal</button>`;
+function start(){S=sh(pool());if(sub=='test')S=S.slice(0,10);if(sub=='match')S=S.slice(0,6);tot=S.length;k=0;fl=false;sc=0;sel=null;S.forEach(c=>{c.w=0;c.o=sh([c[1],...sh(AL.filter(a=>a!=c[1])).slice(0,3)])});T=sh(S.flatMap((c,i)=>[[c[0],i],[c[1],i]]));m=[];pk=null;tm=Date.now();draw()}
+function pick(i){if(sel!=null)return;const c=S[k];sel=c.o[i];if(sel==c[1]){if(!c.w)sc++}else{c.w=1;if(sub=='learn')S.push(c)}draw()}
+function tp(i){if(m.includes(i))return;if(pk==null)pk=i;else{if(pk!=i&&T[pk][1]==T[i][1])m.push(pk,i);pk=null}draw()}
+function study(){
+ let h='<div class="tools">'+[['flash','Flashcards'],['learn','Learn'],['test','Test'],['match','Match']].map(([a,l])=>`<button class="${a==sub?'on':''}" onclick="sub='${a}';start()">${l}</button>`).join('')+`<select onchange="deck=this.value;start()">`+[['mix','All cards'],['c','Concept cards'],['x','Antagonist cards']].map(([a,l])=>`<option value="${a}" ${a==deck?'selected':''}>${l}</option>`).join('')+'</select></div>';
+ if(sub=='flash'){const c=S[k];h+=`<div class="fc" onclick="fl=!fl;draw()">${fl?c[1]:(c[2]?'Spot the difference: ':'')+c[0]}</div><div class="tools"><button onclick="k=(k+S.length-1)%S.length;fl=false;draw()">←</button><span>${k+1} / ${S.length} · tap card to flip</span><button onclick="k=(k+1)%S.length;fl=false;draw()">→</button><button onclick="start()">Shuffle</button></div>`}
+ else if(sub=='match'){const d=m.length==T.length;h+=d?`<div class="item"><b>Cleared</b>All pairs matched in ${((Date.now()-tm)/1000).toFixed(1)}s. <button onclick="start()">Play again</button></div>`:'<p style="font:14px system-ui;color:var(--mu)">Match each question with its answer.</p>';h+='<div class="grid">'+T.map((t,i)=>m.includes(i)?'':`<button class="tile ${pk==i?'on':''}" onclick="tp(${i})">${t[0]}</button>`).join('')+'</div>'}
+ else if(k>=S.length){h+=`<div class="item"><b>${sub=='test'?'Test':'Learn'} complete</b>First-try score: ${sc} / ${tot} <button onclick="start()">Retry</button></div>`}
+ else{const c=S[k];h+=`<div class="item"><b>${sub} · ${Math.min(k+1,S.length)} / ${S.length}</b>${c[2]?'<strong>[Antagonist]</strong> ':''}${c[0]}</div>`+c.o.map((o,i)=>`<button class="opt ${sel==null?'':o==c[1]?'ok':o==sel?'no':''}" onclick="pick(${i})">${o}</button>`).join('')+(sel!=null?`<button class="on" onclick="k++;sel=null;draw()">Next →</button>`:'')}
+ return h}
+function draw(){
+ $('#modes').innerHTML=M.map(([a,l])=>`<button class="${a==mode?'on':''}" onclick="mode='${a}';draw()">${l}</button>`).join('');
+ if(mode=='study'&&!S.length){start();return}
+ let h='';
+ if(mode=='study')h=study();
+ else idx().forEach(i=>{h+=`<h2>Chapter ${D[i][0]}</h2>`;
+  if(mode=='notes')h+=D[i][1].map(([a,b])=>`<div class="item"><b>${a}</b>${hl(b)}</div>`).join('');
+  if(mode=='devil')h+=E[i].d.map(([b,r])=>`<div class="two"><div><b>Common belief</b>${b}</div><div class="dv"><b>Devil’s advocate</b>${hl(r)}</div></div>`).join('');
+  if(mode=='ask')h+=E[i].c.map(([q,a])=>`<div class="item"><b>Interrogate: why / how?</b>${q}<textarea placeholder="Answer in your own words first…"></textarea>${rv}<p hidden>${hl(a)}</p></div>`).join('');
+  if(mode=='role')h+=E[i].d.map(([b,r])=>`<div class="item"><b>Dr. Skeptic insists</b>“${b}”<textarea placeholder="Your rebuttal, as the professor…"></textarea>${rv}<p hidden>${hl(r)}</p></div>`).join('')});
+ $('#out').innerHTML=h}
+draw();
+</script></body></html>
